@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "NodeNext",
+    "lib": ["es2020"],
+    "sourceMap": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "moduleResolution": "NodeNext",
+    "baseUrl": "src",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "esbuild": {
+    "external": [
+      "sqlite3",
+      "better-sqlite3",
+      "tedious",
+      "mysql2",
+      "pg-query-stream",
+      "mysql",
+      "pg-native",
+      "oracledb"
+    ]
+  },
+  "include": [
+    "src/**/*" /*  "src/api/v1/routes" , "knexfile.ts", "migrations" */
+  ],
+  "exclude": ["dist", "node_modules"],
+  "compileOnSave": false
+}
